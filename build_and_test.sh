@@ -8,8 +8,6 @@ docker rm greencube-test 2> /dev/null || true
 docker build -t greencube .
 
 docker run --name greencube-test \
-           -e ROUNDCUBEMAIL_DEFAULT_HOST=localhost \
-           -e ROUNDCUBEMAIL_SMTP_SERVER=localhost \
            -p 8000:80 \
            -p 3025:25 \
            -p 3465:465 \

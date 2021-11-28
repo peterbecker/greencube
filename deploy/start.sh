@@ -7,7 +7,7 @@ java -Dgreenmail.setup.all \
      -Dgreenmail.hostname=0.0.0.0 \
      -Dgreenmail.users.login=email \
      -Dgreenmail.auth.disabled \
-     -jar /greenmail.jar > /greenmail.out 2> /greenmail.err &
+     -jar /greenmail.jar > /greencube/greenmail.out 2> /greencube/greenmail.err &
 
 echo "Forwarding to the Roundcube scripts"
 . /docker-entrypoint.sh
