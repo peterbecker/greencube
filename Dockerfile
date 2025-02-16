@@ -1,14 +1,12 @@
-FROM roundcube/roundcubemail:1.4.x-apache
+FROM roundcube/roundcubemail:1.6.10-apache
 
-ADD https://repo1.maven.org/maven2/com/icegreen/greenmail-standalone/1.6.5/greenmail-standalone-1.6.5.jar /greenmail.jar
+ADD https://repo1.maven.org/maven2/com/icegreen/greenmail-standalone/2.1.3/greenmail-standalone-2.1.3.jar /greenmail.jar
 ADD /deploy/* /greencube/
 
 RUN \
     apt-get update && \
     apt-get -y upgrade && \
-    # openjdk package needs this, but it's missing in the base image
-    mkdir /usr/share/man/man1/ && \
-    apt-get install -y openjdk-11-jre-headless  && \
+    apt-get install -y openjdk-17-jre-headless  && \
     rm -rf /var/lib/apt/lists/* && \
     chmod a+x /greencube/*.sh
 

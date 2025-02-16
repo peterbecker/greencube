@@ -1,10 +1,5 @@
 # GreenCube Email Test Setup
 
-## Status
-
-This is work in progress and only partially working. At the moment sending mail via telnet works but doesn't
-show the sender, Thunderbird and Rouncube throw errors. Roundcube, Grenmail API and IMAP seem to work fine.
-
 ## Overview
 
 This project combines the test email server [Greenmail](https://greenmail-mail-test.github.io/greenmail/) with
