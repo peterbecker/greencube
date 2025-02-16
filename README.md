@@ -30,7 +30,7 @@ docker run --name greencube \
            -p 8000:80 \
            -p 8080:8080 \
            -d \
-           greencube
+           ghcr.io/peterbecker/greencube:main
 ```
 
 This will allow you to:
@@ -62,6 +62,10 @@ The setup maps a number of ports:
 
 See the start command in the `build_and_test.sh` script for an example of how to run the image into a
 standalone container with all ports enabled.
+
+Given the status as test tool, there is currently no full release process, but older versions of the Docker
+image can be found [in the GitHub package hosting](https://github.com/peterbecker/greencube/pkgs/container/greencube)
+if needed.
 
 ## Development Setup
 
